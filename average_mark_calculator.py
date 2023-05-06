@@ -5,19 +5,16 @@
 # Author: KafetzisThomas - https://github.com/KafetzisThomas
 
 subjects = {}
+count = int(input("\nHow many subjects do you have?\n> "))
+
 i = 0
-count = int(input("\nHow many subjects do you have? \n> "))
 while i != count:
-    i += 1
-    for x in range(1):
-        x += 1
-        subject = str(input(f"\nSubject {i}: "))
-        grade = float(input("Grade: "))
-        subjects[subject] = grade
-        print(f"Added: {subjects}")
-    print("----------------------" * i)
+  i += 1
+  subject = str(input(f"\nSubject {i}: "))
+  grade = float(input("Grade: "))
+  subjects[subject] = grade
+  print(f"Added: {subject}")
 
 values = subjects.values()
-sum = sum(values)
-total = (sum/count)
-print(f"Total Grade: {total}")
+total = sum(values) / count
+print(f"\nAverage grade: {total}")
